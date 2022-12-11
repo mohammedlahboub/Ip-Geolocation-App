@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ! displays site properly based on user's device -->
+ 
+  <!-- ! google font Rubik -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- ! google font Rubik -->
+ 
+ <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>IP Address Tracker</title>
+  <!-- ! tailwind css outup file -->
+  <link rel="stylesheet" href="./build.css">
+
+  <!-- ! javaScript -->
+  <script defer src="./main.js"></script>
+</head>
+<body class="w-screen min-h-screen overflow-x-hidden font-rubik flex flex-col bg-slate-500 relative">
+
+
+<div class="w-full flex flex-col gap-8 items-center py-8 px-2 pb-[7rem] bg-[url(./images/pattern-bg.png)] bg-no-repeat bg-cover bg-center">
+
+
+  <h1 class=" text-white font-medium text-3xl">IP Address Tracker</h1>
+  <div class="w-full sm:w-4/5 md:w-[30rem] flex h-12 overflow-hidden rounded-xl ">
+    <input id="inputIp" class="flex-grow focus-within:outline-0 p-4 text-lg" placeholder="Search for any IP address or domain" type="text">
+    <button class="h-full w-12 text-transparent bg-very-dark-gray bg-[url(./images/icon-arrow.svg)] bg-no-repeat bg-center hover:bg-dark-gray transition ease-in-out delay-70 active:scale-150" >search</button>
+  </div>
+  <div class="md:w-3/4  py-5 rounded-xl bg-white absolute top-[12rem]">
+
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4  ">
+
+      <div class="flex flex-col gap-2 px-7 ">
+        <h2 class="uppercase text-dark-gray font-medium">IP Address</h2>
+        <p id="ipaddress" class=" font-semibold text-2xl">192.212.174.101</p>
+      </div>
+
+      <div class="flex flex-col gap-2 px-7 md:border-l border-slate-600">
+        <h2 class="uppercase text-dark-gray font-medium">Location</h2>
+        <p id="locattion" class=" font-semibold text-2xl">Brooklyn,NY 10001</p>
+      </div>
+
+      <div class="flex flex-col gap-2 px-7 xl:border-l border-slate-600">
+        <h2 class="uppercase text-dark-gray font-medium">Timezone</h2>
+        <p id="timezone" class=" font-semibold text-2xl">UTC -05:00</p>
+      </div>
+
+      <div class="flex flex-col gap-2 px-7 md:border-l border-slate-600">
+        <h2 class="uppercase text-dark-gray font-medium">ISP</h2>
+        <p id="isp" class=" font-medium text-3xl">SpaceX  Starlink</p>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+<div id="map" class="w-full h-[1000px] md:h-auto  md:flex-grow  bg-black"></div>
+
+
+  
+  <!--  
+    UTC    add offset value dynamically using the API
+  
+  
+   -->
+</body>
+</html>
