@@ -80,6 +80,7 @@ ipInput.addEventListener("keypress", function(event) {
            // A marker with a with a URL pointing to a PNG.
            const markerImg = document.createElement('img');
            markerImg.src = './images/icon-location.svg';
+           markerImg.alt = `${path} Location`;
            markerImg.style.width = "40px";
            
            const userMarker = new google.maps.marker.AdvancedMarkerView({
