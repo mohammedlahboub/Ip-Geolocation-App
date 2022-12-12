@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.invalid-input{
+    @apply border-[3px]  border-red-500 rounded-bl-xl rounded-tl-xl 
+}
+
+.valid-input{ 
+    @apply border-[3px]  border-green-500 rounded-bl-xl rounded-tl-xl 
+}

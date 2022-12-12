@@ -28,30 +28,30 @@
   <h1 class=" text-white font-medium text-3xl">IP Address Tracker</h1>
   <div class="w-full sm:w-4/5 md:w-[30rem] flex h-12 overflow-hidden rounded-xl ">
     <input id="inputIp" class="flex-grow focus-within:outline-0 p-4 text-lg" placeholder="Search for any IP address or domain" type="text">
-    <button class="h-full w-12 text-transparent bg-very-dark-gray bg-[url(./images/icon-arrow.svg)] bg-no-repeat bg-center hover:bg-dark-gray transition ease-in-out delay-70 active:scale-150" >search</button>
+    <button id="searchBtn" class="h-full focus-within:outline-0 w-12 text-transparent bg-very-dark-gray bg-[url(./images/icon-arrow.svg)] bg-no-repeat bg-center hover:bg-dark-gray transition ease-in-out delay-70 active:scale-150" >search</button>
   </div>
-  <div class="md:w-3/4  py-5 rounded-xl bg-white absolute top-[12rem]">
+  <div class="md:w-3/4  py-5 rounded-xl bg-white z-10 absolute top-[12rem]">
 
-    <div class="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4  ">
+    <div class="w-full grid grid-cols-1 md:gap-y-2 md:grid-cols-2 xl:grid-cols-4  ">
 
       <div class="flex flex-col gap-2 px-7 ">
-        <h2 class="uppercase text-dark-gray font-medium">IP Address</h2>
-        <p id="ipaddress" class=" font-semibold text-2xl">192.212.174.101</p>
+        <h2 class="uppercase text-dark-gray font-medium">IP address</h2>
+        <p id="ipaddress" class=" font-semibold text-2xl"></p>
       </div>
 
       <div class="flex flex-col gap-2 px-7 md:border-l border-slate-600">
-        <h2 class="uppercase text-dark-gray font-medium">Location</h2>
-        <p id="locattion" class=" font-semibold text-2xl">Brooklyn,NY 10001</p>
+        <h2 class="uppercase text-dark-gray font-medium">locattion</h2>
+        <p id="locattion" class=" font-semibold text-2xl"></p>
       </div>
 
       <div class="flex flex-col gap-2 px-7 xl:border-l border-slate-600">
-        <h2 class="uppercase text-dark-gray font-medium">Timezone</h2>
-        <p id="timezone" class=" font-semibold text-2xl">UTC -05:00</p>
+        <h2 class="uppercase text-dark-gray font-medium">timezone</h2>
+        <p id="timezone" class=" font-semibold text-2xl"></p>
       </div>
 
       <div class="flex flex-col gap-2 px-7 md:border-l border-slate-600">
-        <h2 class="uppercase text-dark-gray font-medium">ISP</h2>
-        <p id="isp" class=" font-medium text-3xl">SpaceX  Starlink</p>
+        <h2 class="uppercase text-dark-gray font-medium">isp</h2>
+        <p id="isp" class=" font-medium text-3xl"></p>
       </div>
     </div>
 
@@ -60,14 +60,10 @@
 
 </div>
 
-<div id="map" class="w-full h-[1000px] md:h-auto  md:flex-grow  bg-black"></div>
+<div id="map" class="w-full h-[800px] md:h-auto  md:flex-grow  bg-black"></div>
 
 
-  
-  <!--  
-    UTC    add offset value dynamically using the API
-  
-  
-   -->
+  <!-- Google Maps API -->
+<script src="https://maps.googleapis.com/maps/api/js?v=beta&key=AIzaSyC2RbjJPUSX12_2mvZqopGJseNRq6pXIvQ&callback=initMap&libraries=marker" defer ></script>
 </body>
 </html>
